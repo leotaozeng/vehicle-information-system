@@ -1,3 +1,5 @@
+package interfaces;
+
 public interface MotorVehicle extends Vehicle {
     // interface methods
     void setNumberOfWheels(int wheels);
