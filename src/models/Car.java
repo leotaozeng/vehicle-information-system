@@ -3,9 +3,9 @@ package models;
 import interfaces.CarVehicle;
 
 public class Car implements CarVehicle {
-    private String make;
-    private String model;
-    private int year;
+    private final String make;
+    private final String model;
+    private final int year;
     private int numberOfDoors;
     private String fuelType;
 
@@ -36,7 +36,7 @@ public class Car implements CarVehicle {
      * @return year - 生产年份
      */
     @Override
-    public int getYear() {
+    public int getYearOfManufacture() {
         return year;
     }
 
