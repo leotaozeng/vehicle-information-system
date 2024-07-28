@@ -3,60 +3,72 @@ package models;
 import interfaces.MotorVehicle;
 
 public class Motorcycle implements MotorVehicle {
+    private String make;
+    private String model;
+    private int year;
+    private int numberOfWheels;
+    private String motorcycleType;
 
-    /**
-     * @param wheels
-     */
-    @Override
-    public void setNumberOfWheels(int wheels) {
-
+    // Create a class constructor for the Motorcycle class
+    public Motorcycle(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
 
     /**
-     * @return
-     */
-    @Override
-    public int getNumberOfWheels() {
-        return 0;
-    }
-
-    /**
-     * @param motorcycleType
-     */
-    @Override
-    public void setMotorcycleType(String motorcycleType) {
-
-    }
-
-    /**
-     * @return
-     */
-    @Override
-    public String getMotorcycleType() {
-        return "";
-    }
-
-    /**
-     * @return
+     * @return make - 车辆品牌
      */
     @Override
     public String getMake() {
-        return "";
+        return make;
     }
 
     /**
-     * @return
+     * @return model - 车辆模型
      */
     @Override
     public String getModel() {
-        return "";
+        return model;
     }
 
     /**
-     * @return
+     * @return year - 生产年份
      */
     @Override
     public int getYear() {
-        return 0;
+        return year;
+    }
+
+    /**
+     * @param wheels - Number of wheels
+     */
+    @Override
+    public void setNumberOfWheels(int wheels) {
+        this.numberOfWheels = wheels;
+    }
+
+    /**
+     * @return numberOfWheels
+     */
+    @Override
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    /**
+     * @param motorcycleType - Type of motorcycle (sport, cruiser, or off-road)
+     */
+    @Override
+    public void setMotorcycleType(String motorcycleType) {
+        this.motorcycleType = motorcycleType;
+    }
+
+    /**
+     * @return motorcycleType
+     */
+    @Override
+    public String getMotorcycleType() {
+        return motorcycleType;
     }
 }
